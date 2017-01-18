@@ -1,5 +1,3 @@
-### Lab 1
+### Tutorials
 
-1. PyBench Setup
-2. MATLAB Analysis
-3. eLogbook Preparation
+1. 
