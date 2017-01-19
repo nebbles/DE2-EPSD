@@ -38,7 +38,8 @@ plot_spectrum(sig, 8192);
 noisy = sig + randn(size(sig));
 
 figure
-plot(noisy(1:200));
+plot(noisy(1:200)); hold on;
+plot(sig(1:200)); hold off;
 title('Exercise 4: Two tones + noise');
 figure
 plot_spectrum(noisy, 8192);
