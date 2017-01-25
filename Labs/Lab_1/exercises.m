@@ -1,3 +1,7 @@
+clc
+clear all
+close all
+
 %% Exercise 1: Testing sine_gen
 
 s1 = sine_gen(1.0, 440, 8192, 1);
@@ -12,7 +16,6 @@ title('\fontsize{16}440Hz sinewave');
 
 s1 = sine_gen(1.0, 440, 8192, 1);
 
-figure
 plot_spectrum(s1, 8192);
 title('Spectrum');
 
@@ -30,7 +33,6 @@ title('Exercise 3: Two tones (before adding)');
 figure
 plot(sig(1:200));
 title('Exercise 3: Two tones (after adding)');
-figure
 plot_spectrum(sig, 8192);
 
 %% Exercise 4: Two tones + noise
@@ -41,7 +43,6 @@ figure
 plot(noisy(1:200)); hold on;
 plot(sig(1:200)); hold off;
 title('Exercise 4: Two tones + noise');
-figure
 plot_spectrum(noisy, 8192);
 
 %% Exercise 5: Projection using dot product
