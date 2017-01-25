@@ -1,18 +1,34 @@
-%% Tutorial Sheet 1
+%% DE2-Electronics: Tutorial Sheet 1
+% 
+% <html>
+% Author: <b>Benedict Greenberg</b> <br>
+% Created: <b>24 Jan 2017</b> <br>
+% <br>
+% Signals in Time and Frequency Domains <br>
+% Electronics 2 - Design Engineering <br>
+% Imperial College London 
+% </html>
+% 
 
-% Benedict Greenberg
-% Design Engineering - Electronics 2
+%% Runtime commands
 
 clc
 clear all
-format compact
-
+format compact % condenses the outputs in the command window
 close all % closes all existing open figures
+
+% For debugging:
 % set(0,'DefaultFigureVisible','off'); % suppresses plots after this point
 
 %% Question 1
+% 
+% <html>
+% <img src='questions/q1.png' width='500' align='middle'>
+% </html>
+% 
 
-t = linspace(-5,5,500); % arbitrary t values
+N = 500; t0 = -5; tf = 5; % opening time parameters
+t = linspace(t0,tf,N); % arbitrary t values
 
 x1 = 2*sin(2*pi*t); % part i
 
@@ -32,13 +48,23 @@ figure; plot(t,x2); originAxes(); title('Q1 Part ii')
 figure; plot(t,x3); originAxes(); title('Q1 Part iii')
 
 % are signals: causal, periodic, odd/even
-q1_i = 'non-causal, periodic with T= 1 sec, odd'
-q1_ii = 'causal, aperiodic, not even/odd'
-q1_iii = 'non-causal, aperiodic, even'
+
+%%
+% Part (i) shows a non-causal, periodic (T= 1 sec), odd function.
+%
+% Part (ii) shows a causal, aperiodic function which is neither even/odd.
+%
+% Part (iii) shows a non-causal, aperiodic, even function.
 
 %% Question 2
-
-% using the same values for t
+% 
+% <html>
+% <img src='questions/q2.png' width='500' align='middle'>
+% </html>
+% 
+% Use the same values for _t_ as in previous question.
+%
+% See *q2* function in appendix.
 
 x = q2(t);
 x1 = q2(t+3);
@@ -50,15 +76,25 @@ x5 = q2(-2*t+1);
 figure(4); plot(t,x,t,x1,t,x2,t,x3,t,x4,t,x5); originAxes(); title('Q2')
 legend('x','i: x(t+3)','ii: x(t/3)','iii: x(t/3+1)','iv: x(-t+2)','v: x(-2t+1)')
 
-q2_i = 'translation left by 3'
-q2_ii = 'expansion in x factor 3'
-q2_iii = 'expansion in x factor 3 followed by translation left by 3'
-q2_iv = 'reflection in x = 1'
-q2_v = 'reflection in x = 0.5 followed by compression by factor 2'
+%%
+% Part (i) translation left by 3.
+% 
+% Part (ii) expansion in x by factor 3.
+% 
+% Part (iii) expansion in x factor 3 followed by translation left by 3
+% 
+% Part (iv) reflect in y axis and shift right by 2
+% 
+% Part (v) reflection in y axis, compress by factor 2, and shift right by half.
 
 %% Question 3
+% 
+% <html>
+% <img src='questions/q3.png' width='500' align='middle'>
+% </html>
+% 
+% Use the same values for _t_ as in previous question.
 
-% using same values for t
 
 x1 = cos(t*pi); % part i
 
@@ -75,34 +111,59 @@ end
 figure; plot(t,x1); originAxes(); title('Q3 Part i')
 figure; plot(t,x2); originAxes(); title('Q3 Part ii')
 
-q3_i = 'non-causal, periodic with T= 2 sec, even'
-q3_ii = 'non-causal, aperiodic, not even/odd'
+%%
+% Part (i) is a non-causal, periodic (T= 2 sec), even function.
+% 
+% Part (ii) is a non-causal, aperiodic function neither even/odd.
 
 %% Question 4
+% 
+% <html>
+% <img src='questions/q4.png' width='500' align='middle'>
+% </html>
+%
+% *NOTE:* that the sampling frequency of the time domain MUST match the
+% sampling frequency of the frequency domain. If this does not happen then
+% the _fft_ function will not correctly match up the time and frequency
+% samples.
 
-% note that the sampling frequency of the time domain 
-% MUST match the sampling frequency of the frequency domain.
+fs = 8192; % set the sampling frequency
+dt = 1/fs; % find dt
+t = -5:dt:5; % redefine our time span using set sampling freq
 
-% x = sin(2*pi*350*t) + 0.35*sin(6283*t) + 0.1;
-% y = 1.5*cos(2199*t) + sin(2*pi*1000*t / (pi/2) );
+x = sin(2*pi*350*t) + 0.35*sin(6283*t) + 0.1;
+y = 1.5*cos(2199*t) + sin(2*pi*1000*t / (pi/2) );
 
-% x = sine_gen(1,350,8192,5) + sine_gen(0.35,6283/(2*pi),8192,5) + 0.1;
-% y = sine_gen(1.5,2199/(2*pi),8192,5) + sine_gen(1,4000/(2*pi),8192,5);
+%%
+% In practise we see that the sine wave takes on the form:
+%
+% $$ A*sin(2*\pi*f*t) $$
+%
+% where $A$ is the amplitude, $f$ is the frequency as seen in the
+% spectrum, and $t$ is the time variable.
+%
+% *frequency_magnitude_peaks* is an outputted matric that find the peaks of
+% the spectrum and returns each peak in a row. Column 1 corresponds to
+% peak frequency and column 2 corresponds to the peaks magnitude.
 
-% q4_i = ' '
-% plot_spectrum(x,8192)
-% title('Q4 Part i spectrum')
+plot_spectrum(x,8192)
+title('Q4 Part i spectrum')
 
-% q4_ii = ' '
-% plot_spectrum(y,8192)
-% title('Q4 Part ii spectrum')
-
+plot_spectrum(y,8192)
+title('Q4 Part ii spectrum')
 
 %% Question 5
+% 
+% <html>
+% <img src='questions/q5.png' width='500' align='middle'>
+% </html>
+%
+% This was done in Q4.
 
-% this was done in Q4
-
-%% Global functions
+%% Appendix - functions
+% These global functions are placed at the end of the script.
+%
+% Firstly *originAxes()* set the environment of the plot.
 
 function originAxes()
 % this sets the axes to pass through the origin, removes the box around the
@@ -116,17 +177,23 @@ ax.Box = 'off';
 
 end
 
+%%
+% Question 2 utilises a function to save space.
+
 function x = q2(t)
 % this function is required for question 2
-    x = [];
+    x = zeros(1,length(t));
     for i = 1:length(t)
         if 0 <= t(i) && t(i) <= 1
-            x = [x 1-t(i)];
+            x(i) = 1-t(i);
         else
-            x = [x 0];
+            x(i) = 0;
         end
     end
 end
+
+%%
+% Sine generation function as seen in Lab 1.
 
 function [sig] = sine_gen(amp, f, fs, T) % Function to generate a sine wave
 %     
@@ -138,6 +205,10 @@ function [sig] = sine_gen(amp, f, fs, T) % Function to generate a sine wave
     t = 0:dt:T;
     sig = amp*sin(2*pi*f*t);
 end
+
+%%
+% Plotting a spectrum as seen in Lab 1 but with some modifications such as
+% identifying peaks.
 
 function plot_spectrum( sig, fs )
 % Function to plot frequency spectrum of sig
