@@ -80,16 +80,18 @@ q3_ii = 'non-causal, aperiodic, not even/odd'
 
 %% Question 4
 
+% note that the sampling frequency of the time domain 
+% MUST match the sampling frequency of the frequency domain.
 
 % x = sin(2*pi*350*t) + 0.35*sin(6283*t) + 0.1;
 % y = 1.5*cos(2199*t) + sin(2*pi*1000*t / (pi/2) );
 
-x = sine_gen(1,350,8192,5) + sine_gen(0.35,6283/(2*pi),8192,5) + 0.1;
+% x = sine_gen(1,350,8192,5) + sine_gen(0.35,6283/(2*pi),8192,5) + 0.1;
 % y = sine_gen(1.5,2199/(2*pi),8192,5) + sine_gen(1,4000/(2*pi),8192,5);
 
-q4_i = ' '
-plot_spectrum(x,8192)
-title('Q4 Part i spectrum')
+% q4_i = ' '
+% plot_spectrum(x,8192)
+% title('Q4 Part i spectrum')
 
 % q4_ii = ' '
 % plot_spectrum(y,8192)
