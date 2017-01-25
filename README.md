@@ -1,5 +1,8 @@
 # DE2-EPSD Logbook
-_Imperial College DE2 Electronics for Product and System Design_  
+### Benedict Greenberg
+> Imperial College London  
+> Dyson School of Design Engineering  
+> DE2 Electronics for Product and System Design  
 
 ### Contents
 - [Labs](/Labs)
