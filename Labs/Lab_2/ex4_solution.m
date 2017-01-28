@@ -3,7 +3,7 @@
 clear all
 close all
 
-[sig fs] = audioread('two_drums.wav');
+[sig fs] = audioread('sounds/two_drums.wav');
 % sound(sig, fs);
 figure; set(gcf,'color','w');
 plot(sig);
