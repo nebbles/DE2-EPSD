@@ -3,3 +3,6 @@
 
 # MATLAB
 *.m~
+
+# Directories
+git-ignored/
