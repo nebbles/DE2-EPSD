@@ -21,8 +21,8 @@ Find quick links to the lab resources below.
 #### Data
 MATLAB workspace variables have been saved as well for reuse. This means that the original box does not need to be used to run get results. The scripts however do run as if the hardware is connected.
 - __ex1_F.mat__ is variable for stored information on the charaterisation of the graph in exercise 1.
-- __ex1_x_dc__ is the variable storing x_dc data from exercise 1.
-- __ex1_y_dc__ is the variable storing y_dc data from exercise 1.
+- __ex1_x_dc.mat__ is the variable storing x_dc data from exercise 1.
+- __ex1_y_dc.mat__ is the variable storing y_dc data from exercise 1.
 
 #### Provided source code
 - [PyBench MATLAB function library](PyBench.m)
