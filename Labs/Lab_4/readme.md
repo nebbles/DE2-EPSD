@@ -16,6 +16,7 @@ Find quick links to the lab resources below.
 - [Exercise 4 - Testing python for PyBench](lab4_ex4.py)
 - [Exercise 5 - Displaying pitch on PyBench](lab4_ex5.py)
 - [Exercise 5b - Graphical pitch on PyBench](lab4_ex5b.py)
+- [Exercise 6 - 3D models of robot stabilisers](ex6/)
 
 #### Provided source code
 - [PyBench MATLAB function library (v2.0)](PyBench.m)
