@@ -4,8 +4,7 @@ Find quick links to the lab resources below.
 
 #### [Provided lab notes](DE2 Lab4 - IMU & OLED.pdf)
 
-#### Logbook
-[Logbook (OneNote online)](https://imperiallondon-my.sharepoint.com/personal/bsg115_ic_ac_uk/Documents/DE%20Electronics%20Logbook/?web=1)  
+#### [Logbook (OneNote online)](https://imperiallondon-my.sharepoint.com/personal/bsg115_ic_ac_uk/Documents/DE%20Electronics%20Logbook/?web=1)  
 
 #### Lab exercises
 - Exercise 1
