@@ -9,6 +9,7 @@
   + [Lab 1 (Soldering the PyBench and signals on MATLAB)](/Labs/Lab_1)
   + [Lab 2 (Signal Processing with PyBench & Matlab)](/Labs/Lab_2) 
   + [Lab 3 (System Charaterisation and Transfer Function)](/Labs/Lab_3)
+  + [Lab 4 (IMU & OLED)](/Labs/Lab_4)
 - [Tutorials](/Tutorials)
 - Project
 
