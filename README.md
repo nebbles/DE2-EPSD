@@ -12,4 +12,5 @@
   + [Lab 4 (IMU & OLED)](/Labs/Lab_4)
 - [Tutorials](/Tutorials)
 - Project
+  + [Stabiliser designs for robot](/Labs/Lab_4/ex6)
 
