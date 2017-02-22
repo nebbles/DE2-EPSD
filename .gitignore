@@ -4,5 +4,8 @@
 # MATLAB
 *.m~
 
+# SOLIDWORKS
+~$*
+
 # Directories
 git-ignored/
