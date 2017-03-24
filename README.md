@@ -11,8 +11,8 @@
   + [Lab 3 (System Charaterisation and Transfer Function)](/Labs/Lab_3)
   + [Lab 4 (IMU & OLED)](/Labs/Lab_4)
 - [Tutorials](/Tutorials)
-- Project
+- [Project](/Project)
   + [Stabiliser designs for robot](/Labs/Lab_4/ex6)
-  + [Final code for PyBench Balancing Robot (.zip)](Projects/DE2-EPSD Group7 Final Project.zip)
+  + [Final code for PyBench Balancing Robot (.zip)](Project/DE2-EPSD_Group7_Final_Project.zip)
   + [Videos and pitctures of completed work](http://bit.ly/DE2-EPSD-G7-MEDIA)
 
