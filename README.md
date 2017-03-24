@@ -13,4 +13,6 @@
 - [Tutorials](/Tutorials)
 - Project
   + [Stabiliser designs for robot](/Labs/Lab_4/ex6)
+  + [Final code for PyBench Balancing Robot (.zip)](Projects/DE2-EPSD Group7 Final Project.zip)
+  + [Videos and pitctures of completed work](http://bit.ly/DE2-EPSD-G7-MEDIA)
 
