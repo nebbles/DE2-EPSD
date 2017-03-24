@@ -10,3 +10,4 @@
 # Directories
 git-ignored/
 *-gi/
+.idea/
